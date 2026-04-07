@@ -17,3 +17,11 @@ def add(a: int, b: int):
 @app.get("/multiply")
 def multiply(a: int, b: int):
     return {"result": a * b}
+
+@app.get("/square")
+def square(n: int):
+    return {
+        "operation": "square",
+        "input": n,
+        "result": n * n
+    }
